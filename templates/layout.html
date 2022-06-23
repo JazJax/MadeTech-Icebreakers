@@ -2,10 +2,12 @@
 <html>
 <head>
     <title>{% block title %}Made Tech icebreaker cards{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 </head>
 <body>
@@ -14,18 +16,18 @@
         <img src="static/img/made_tech_mountains.png" height="64" width="64" alt="">
         <h1>{% block heading %}Made Tech icebreaker cards{% endblock %}</h1>
     </header>
-    <div class="wrapper">
+    <main class="wrapper">
         <div class="flow flow--centred">
-            <div class="container">
+            <section class="container">
                 {% block content %}
                 {% endblock %}
-            </div>
-            <div class="container">
+            </section>
+            <section class="container navigation">
                 {% block next %}
                 {% endblock %}
-            </div>
+            </section>
         </div>
-    </div>
+    </main>
 </div>
 </body>
 </html>
